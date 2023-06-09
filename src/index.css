@@ -226,6 +226,7 @@ html,body {
     overflow-y: scroll;
     height: calc(100vh - 75px);
     padding-top: 30px;
+    margin-left: 12%;
 }
 .follow_btn {
     background: -o-linear-gradient(96.55deg, #9AE769 -2.88%, #69BD06 115.09%);
