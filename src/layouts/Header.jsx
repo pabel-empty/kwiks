@@ -5,7 +5,7 @@ import searchIcon from '../assets/img/search.png';
 
 function Header( props ) {
     return (
-        <header className="header_section flex justify-between bg-white p-4 items-center sticky top-0">
+        <header className="header_section flex justify-between bg-white p-4 items-center sticky top-0 pr-12 pl-12">
             <div className="left_content flex-1">
                 <div className="main_menu flex items-center">
                     <a href="#" className="flex">

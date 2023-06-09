@@ -9,11 +9,11 @@ import playStore from '../assets/img/play_store.png';
 
 function Sidebar() {
     return (
-        <div className='flex-none w-1/4 mt-10'>
+        <div className='flex-1 sidebar_wrapper'>
             <div className="sidebar">
                 <ul className="list-none">
                     <li>
-                        <a href="#" className='flex pb-5'>
+                        <a href="#" className='flex pb-5 active'>
                             <img src={ trendingIcon } alt="" />
                             <span>Trending</span>
                         </a>

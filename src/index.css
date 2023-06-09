@@ -7,9 +7,19 @@ html,body {
     font-family: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
 /* =========== Header Section CSS =========== */
+
 .header_section {
-    box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+    -webkit-box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+            box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+    z-index: 9999;
 }
 .main_menu a {
     font-weight: 500;
@@ -38,6 +48,7 @@ html,body {
 
 .right_content button:hover, .right_content .active {
     color: #fff;
+    background: -o-linear-gradient(282.43deg, #8FDD5D -2.74%, #71BB42 69.1%);
     background: linear-gradient(167.57deg, #8FDD5D -2.74%, #71BB42 69.1%);
 }
 .separate {
@@ -51,8 +62,12 @@ html,body {
     height: 25px;
 }
 .search_field {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .search_field input {
     font-weight: 400;
@@ -68,8 +83,11 @@ html,body {
 }
 
 
-/* Sidebar Css */
 
+/* =============== Left Sidebar Css =============== */
+.sidebar_wrapper {
+    padding-top: 30px;
+}
 .sidebar ul li a span {
     font-weight: 500;
     font-size: 18px;
@@ -88,7 +106,9 @@ html,body {
 .sidebar img {
     width: 27px;
 }
-
+.sidebar ul li .active span {
+    color: #408440;
+}
 
 .popular_creators h4, .download_buttons h4, .others_link h4 {
     font-weight: 600;
@@ -145,8 +165,12 @@ html,body {
     margin-bottom: 5px;
 }
 .following_credentials {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 10px;
 }
 .following_credentials p {
@@ -167,11 +191,93 @@ html,body {
     margin-right: 6px;
 }
 .following_credentials ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 
 
+/* =============== Video Wrapper Css =============== */
+.video_card {
+    margin-bottom: 50px;
+}
+.video_card_wrapper {
+    width: 600px;
+    overflow-y: scroll;
+    height: calc(100vh - 76px);
+    padding-top: 30px;
+}
+.follow_btn {
+    background: -o-linear-gradient(96.55deg, #9AE769 -2.88%, #69BD06 115.09%);
+    background: linear-gradient(353.45deg, #9AE769 -2.88%, #69BD06 115.09%);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 9px 20px;
+}
+.video_details_box h4 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    padding-left: 47px;
+    padding-top: 20px;
+}
+.video video {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+.like_comment_share_area {
+    position: absolute;
+    right: 8%;
+    bottom: 0px;
+}
+.icons_box {
+    height: 40px;
+    width: 40px;
+    background: #f8f8f8;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+    position: relative;
+    margin-bottom: 8px;
+}
+.icons_box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    padding: 7px;
+}
+.like_comment_share_area p {
+    font-weight: 600;
+    font-size: 11.0864px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    opacity: 0.75;
+}
+.like_comment_share_area a {
+    display: block;
+    margin-top: 17px;
+}
+.details p {
+    color: #4F4F4F;
+}
 
 
 
+
+/* =============== Right Side Css =============== */
+.right_side_bar {
+    padding-top: 30px;
+}
