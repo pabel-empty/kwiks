@@ -13,19 +13,19 @@ function Sidebar() {
             <div className="sidebar">
                 <ul className="list-none">
                     <li>
-                        <a href="#" className='flex pb-5 active'>
+                        <a href="#" className='items-center flex pb-5 active'>
                             <img src={ trendingIcon } alt="" />
                             <span>Trending</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" className='flex pb-5'>
+                        <a href="#" className='items-center flex pb-5'>
                             <img src={ userIcon } alt="" />
                             <span>Following</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" className='flex pb-5'>
+                        <a href="#" className='items-center flex pb-5'>
                             <img src={ videoIcon } alt="" />
                             <span>Explore</span>
                         </a>

@@ -15,7 +15,7 @@ function Header( props ) {
                     <div className="separate mx-5"></div>
                     <div className="search_field">
                         <img src={ searchIcon } alt="" />
-                        <input class="appearance-none block w-full border py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Search"></input>
+                        <input className="appearance-none block w-full border py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Search"></input>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ function Header( props ) {
 
             <div className="right_content flex-1 text-right">
                 <div className="inline-flex items-center">
-                    <div className="separate mr-5"></div>
+                    <div className="separate mr-3"></div>
                     <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
                         Creator
                     </button>

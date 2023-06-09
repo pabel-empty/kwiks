@@ -20,6 +20,7 @@ html,body {
     -webkit-box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
             box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
     z-index: 9999;
+    height: 75px;
 }
 .main_menu a {
     font-weight: 500;
@@ -33,10 +34,10 @@ html,body {
 }
 .right_content button {
     background: #fff;
-    border-radius: 30px;
-    padding: 10px 30px;
+    border-radius: 20px;
+    padding: 10px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     color: #3C3C3C;
     margin-left: 5px;
     transition: .3s !important;
@@ -44,12 +45,15 @@ html,body {
     -moz-transition: .3s !important;
     -ms-transition: .3s !important;
     -o-transition: .3s !important;
+    height: 40px;
+    width: 93px;
 }
 
 .right_content button:hover, .right_content .active {
     color: #fff;
     background: -o-linear-gradient(282.43deg, #8FDD5D -2.74%, #71BB42 69.1%);
     background: linear-gradient(167.57deg, #8FDD5D -2.74%, #71BB42 69.1%);
+    font-weight: 400;
 }
 .separate {
     background: #B1B5BB;
@@ -104,7 +108,8 @@ html,body {
     color: #408440;
 }
 .sidebar img {
-    width: 27px;
+    width: 24px;
+    height: 24px;
 }
 .sidebar ul li .active span {
     color: #408440;
@@ -162,7 +167,7 @@ html,body {
     color: #3C3C3C;
     margin-right: 15px;
     float: left;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .following_credentials {
     display: -webkit-box;
@@ -181,14 +186,15 @@ html,body {
     margin-right: 10px;
 }
 .following_credentials ul li a {
-    height: 30px;
-    width: 30px;
+    height: 24px;
+    width: 24px;
     background: #F0F0F0;
     display: inline-block;
     text-align: center;
-    line-height: 32px;
+    line-height: 26px;
     border-radius: 50%;
     margin-right: 6px;
+    font-size: 13px;
 }
 .following_credentials ul {
     display: -webkit-box;
@@ -217,7 +223,8 @@ html,body {
     line-height: 19px;
     text-align: center;
     color: #FFFFFF;
-    padding: 9px 20px;
+    width: 75px;
+    height: 32px;
 }
 .video_details_box h4 {
     font-weight: 500;
@@ -225,17 +232,20 @@ html,body {
     line-height: 21px;
     color: #000000;
     padding-left: 47px;
-    padding-top: 20px;
+    padding-top: 18px;
+}
+.video {
+    width: 320px;
+    margin: 0 auto;
 }
 .video video {
-    width: 60%;
-    margin: 0 auto;
-    border-radius: 30px;
-    margin-top: 30px;
+    border-radius: 24.7313px;
+    margin-top: 25px;
+    position: relative;
 }
 .like_comment_share_area {
     position: absolute;
-    right: 8%;
+    right: -65px;
     bottom: 0px;
 }
 .icons_box {
@@ -273,9 +283,62 @@ html,body {
 .details p {
     color: #4F4F4F;
 }
-
-
-
+.details a h5 {
+    font-weight: 600;
+    font-size: 15.3505px;
+    line-height: 23px;
+    color: #000;
+    padding-left: 5px;
+}
+.details a p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4F4F4F;
+    padding-left: 5px;
+}
+.creator_box .img a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.video_title_music_wrapper {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(360deg, #1C1C1C 7.3%, rgba(45, 45, 45, 0.35) 35.03%, rgba(48, 48, 48, 0) 45.12%);
+    opacity: 0.8;
+    border-radius: 24.7313px;
+    height: 70%;
+    width: 100%;
+    left: 0;
+}
+.video_title_music_inner a {
+    font-weight: 400;
+    font-size: 12.2336px;
+    line-height: 12px;
+    color: #BCBCBC;
+    font-family: 'Roboto', sans-serif;
+}
+.music_name p {
+    font-weight: 500;
+    font-size: 10.52804px;
+    line-height: 10px;
+    color: #BCBCBC;
+    font-family: 'Roboto', sans-serif;
+}
+.video_title_music_inner {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.music_name {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+.music_name img {
+    margin-right: 8px;
+}
 
 /* =============== Right Side Css =============== */
 .right_side_bar {
