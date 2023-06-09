@@ -15,12 +15,6 @@ function App() {
 
           <MainComponent />
 
-          <div className='flex-1 text-right'>
-            <div className="right_side_bar">
-              {/* This column for future */ }
-            </div>
-          </div>
-
         </div>
       </section>
     </>

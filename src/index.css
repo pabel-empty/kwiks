@@ -9,6 +9,8 @@ html,body {
 
 ::-webkit-scrollbar {
     display: none;
+    width: 0px;
+    background: transparent;
 }
 
 
@@ -58,7 +60,7 @@ html,body {
 .separate {
     background: #B1B5BB;
     height: 30px;
-    width: 2px;
+    width: 1px;
 }
 .search_field img {
     width: 25px;
@@ -76,11 +78,19 @@ html,body {
 .search_field input {
     font-weight: 400;
     font-size: 14px;
-    color: #3C3C3C;
-    opacity: 0.6;
     background: transparent;
     border: none;
+    color: #3C3C3C;
+    opacity: 0.5;
 }
+.search_field input::placeholder{
+    font-weight: 400;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #3C3C3C;
+}
+
 .main_menu > a > img {
     height: 30px;
     width: 30px;
@@ -91,6 +101,8 @@ html,body {
 /* =============== Left Sidebar Css =============== */
 .sidebar_wrapper {
     padding-top: 30px;
+    overflow-y: scroll;
+    height: calc(100vh - 75px);
 }
 .sidebar ul li a span {
     font-weight: 500;
@@ -107,6 +119,7 @@ html,body {
 .sidebar ul li a:hover span {
     color: #408440;
 }
+
 .sidebar img {
     width: 24px;
     height: 24px;
@@ -211,8 +224,9 @@ html,body {
 .video_card_wrapper {
     width: 600px;
     overflow-y: scroll;
-    height: calc(100vh - 76px);
+    height: calc(100vh - 75px);
     padding-top: 30px;
+    margin: 0 auto;
 }
 .follow_btn {
     background: -o-linear-gradient(96.55deg, #9AE769 -2.88%, #69BD06 115.09%);

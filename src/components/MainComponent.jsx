@@ -1,13 +1,13 @@
 import React from 'react';
-import userProfile from '../assets/img/user_profile.png';
-import heartIcon from '../assets/img/heart.png';
-import commentIcon from '../assets/img/message.png';
-import shareIcon from '../assets/img/share.png';
+import userProfile from '../assets/img/user_profile.svg';
+import heartIcon from '../assets/img/heart.svg';
+import commentIcon from '../assets/img/message.svg';
+import shareIcon from '../assets/img/share.svg';
 import musicIcon from '../assets/img/music-one.png';
 
 export default function MainComponent() {
     return (
-        <div className='flex-1'>
+        <div className='flex-grow'>
             <div className="video_card_wrapper">
 
                 {/* Video Card */ }
