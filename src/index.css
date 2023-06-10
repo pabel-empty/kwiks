@@ -7,13 +7,82 @@ html,body {
     font-family: 'Poppins', sans-serif;
 }
 
-::-webkit-scrollbar {
+.container {
+    max-width: 1110px;
+}
+.small_device_sidebar{
     display: none;
-    width: 0px;
-    background: transparent;
 }
 
 
+
+/* =========== Sidebar Menu Section CSS =========== */
+.sidebar_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: #fff;
+    height: 100vh;
+    width: 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+}
+.menu_header {
+    background: linear-gradient(167.57deg, #8FDD5D -2.74%, #71BB42 69.1%);
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 20px;
+    align-items: center;
+}
+.menu_header h4 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+.menu_header button {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 25px;
+    background: linear-gradient(353.45deg, #9AE769 -2.88%, #69BD06 115.09%);
+}
+.sidebar_menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sidebar_menu ul li a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #fff;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    width: 210px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #00000080;
+    font-weight: 500;
+    transition: .4s;
+}
+.sidebar_menu ul li a i {
+    color: #fff;
+    font-size: 14px;
+    height: 25px;
+    width: 25px;
+    background: linear-gradient(353.45deg, #9AE769 -2.88%, #69BD06 115.09%);
+    border-radius: 3px;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 5px;
+}
 
 
 /* =========== Header Section CSS =========== */
@@ -22,7 +91,11 @@ html,body {
     -webkit-box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
             box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
     z-index: 9999;
+}
+.header_section_inner {
     height: 75px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .main_menu a {
     font-weight: 500;
@@ -222,11 +295,9 @@ html,body {
     margin-bottom: 50px;
 }
 .video_card_wrapper {
-    width: 600px;
-    overflow-y: scroll;
+    width: 545.11px;
     height: calc(100vh - 75px);
     padding-top: 30px;
-    margin-left: 12%;
 }
 .follow_btn {
     background: -o-linear-gradient(96.55deg, #9AE769 -2.88%, #69BD06 115.09%);
@@ -322,9 +393,10 @@ html,body {
     background: linear-gradient(360deg, #1C1C1C 7.3%, rgba(45, 45, 45, 0.35) 35.03%, rgba(48, 48, 48, 0) 45.12%);
     opacity: 0.8;
     border-radius: 24.7313px;
-    height: 70%;
+    height: 30%;
     width: 100%;
     left: 0;
+    z-index: 0;
 }
 .video_title_music_inner a {
     font-weight: 400;
@@ -358,3 +430,90 @@ html,body {
 .right_side_bar {
     padding-top: 30px;
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199.98px) {
+    .sidebar_inner {
+        padding: 0px 15px;
+    }
+    .header_section_inner {
+        padding: 0px 15px;
+    }
+    .sidebar ul li a span {
+        font-size: 16px;
+    }
+    .video_card_wrapper {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar_wrapper {
+        display: none;
+    }
+    .small_device_sidebar {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-right: 1px solid #ddd;
+        position: fixed;
+        height: 100%;
+        padding-top: 15px;
+    }
+    .separate {
+        display: none;
+    }
+    .main_menu a {
+        margin-right: 20px;
+    }
+    .video_card_wrapper {
+        margin: 0 auto;
+    }
+    .search_field {
+        margin-left: 25px;
+    }
+    
+}
+
+
+@media (max-width: 650px) {
+
+    .video {
+        width: 100%;
+    }
+    .video_card_wrapper {
+        width: 87%;
+        margin-left: auto;
+        margin-right: 0px;
+    }
+    .right_content {
+        display: none;
+    }
+    .m-auto {
+        margin: auto;
+        margin-right: 0;
+        margin-left: auto;
+    }
+    .like_comment_share_area {
+        position: absolute;
+        right: 25px;
+        bottom: 90px;
+    }
+    .like_comment_share_area p {
+        font-size: 14.0864px;
+        color: #fff;
+        opacity: 1;
+    }
+
+}
+
+

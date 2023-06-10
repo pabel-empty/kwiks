@@ -9,7 +9,7 @@ import playStore from '../assets/img/play_store.svg';
 
 function Sidebar() {
     return (
-        <div className='flex-2 sidebar_wrapper w-80'>
+        <div className='flex-2 sidebar_wrapper w-80 overflow-auto scrollbar-hide'>
             <div className="sidebar_inner">
                 <div className="sidebar">
                     <ul className="list-none">
