@@ -88,7 +88,7 @@ export default function VideoContainer() {
                 <h4>Good Morning! Here is my latest magic video.</h4>
 
                 <div className="video relative">
-                    <video ref={ videoRef } onClick={ onVideoPress } loop src="https://assets.codepen.io/2629920/gt3.mp4" className="video"></video>
+                    <video ref={ videoRef } autoPlay onClick={ onVideoPress } loop src="https://assets.codepen.io/2629920/gt3.mp4" className="video"></video>
 
                     <div className="like_comment_share_area">
                         <a href="#">
