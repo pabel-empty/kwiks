@@ -52,7 +52,7 @@ export default function VideoContainer() {
         const observer = new IntersectionObserver( handleViewChange, {
             root: null,
             rootMargin: "0px",
-            threshold: 0.5
+            threshold: 1.0,
         } );
         setObserver( observer );
         if ( videoRef.current ) {

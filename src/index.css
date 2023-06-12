@@ -524,9 +524,8 @@ html,body {
         width: 100%;
     }
     .video_card_wrapper {
-        width: 88%;
-        margin-left: auto;
         margin-right: 0 !important;
+        width: 85%;
     }
     .right_content {
         display: none;
@@ -538,16 +537,29 @@ html,body {
     }
     .like_comment_share_area {
         position: absolute;
-        right: 25px;
+        right: 15px;
         bottom: 90px;
     }
     .like_comment_share_area p {
-        font-size: 14.0864px;
+        font-size: 12.0864px;
         color: #fff;
         opacity: 1;
+        font-weight: 400;
     }
     .container {
         max-width: 100% !important;
+    }
+    .video_details_box {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .icons_box {
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+    .video_details_box h4 {
+        padding-left: 0;
     }
 
 }

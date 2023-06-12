@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 import MainComponent from './components/MainComponent';
 import Header from "./layouts/Header.jsx";
@@ -6,6 +7,14 @@ import Sidebar from './layouts/Sidebar.jsx';
 import SmallDeviceSidebar from './layouts/SmallDeviceSidebar';
 
 function App() {
+
+  const [ play, setPlay ] = useState( false );
+
+  useEffect( () => {
+    setTimeout( () => {
+      setPlay( true );
+    }, 2000 );
+  }, [] );
 
   return (
     <>
@@ -18,7 +27,10 @@ function App() {
 
           <Sidebar />
 
-          <MainComponent />
+
+          {
+            play ? <MainComponent /> : <h3>Loading</h3>
+          }
 
         </div>
       </section>
