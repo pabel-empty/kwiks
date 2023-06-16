@@ -106,7 +106,7 @@ html,body {
 .logo {
     width: 110px;
 }
-.right_content button {
+.right_content button, .second_version_of_header button {
     background: #fff;
     border-radius: 20px;
     padding: 10px;
@@ -121,9 +121,13 @@ html,body {
     -o-transition: .3s !important;
     height: 40px;
     width: 93px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
-.right_content button:hover, .right_content .active {
+.right_content button:hover, .second_version_of_header button:hover, .right_content .active, .second_version_of_header .active {
     color: #fff;
     background: -o-linear-gradient(282.43deg, #8FDD5D -2.74%, #71BB42 69.1%);
     background: linear-gradient(167.57deg, #8FDD5D -2.74%, #71BB42 69.1%);
@@ -569,14 +573,7 @@ html,body {
 
 
 
-
-
-
-
-
-
-
-
+/* Sign up and Sign in modal css */
 .input_box h3 {
     color: #1a2439;
     font-size: 34px;
@@ -660,3 +657,70 @@ html,body {
     padding: 65px 0px 20px;
 }
 
+
+
+
+
+
+
+
+/* Version 2 Main Header */
+.header_section2 {
+    box-shadow: none;
+}
+.second_version_of_header {
+    background: linear-gradient(360deg, #EBF2E3 73.91%, #FFFFFF 127.85%);
+    border-radius: 40px;
+    width: 922px;
+    height: 75px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0px 20px;
+}
+.second_version_of_header .search_field {
+    background: #fff;
+    padding: 0px 15px;
+    width: 329px;
+    height: 50px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.second_version_of_header .logo img {
+    width: 108px;
+    padding-left: 10px;
+}
+
+.second_version_of_header button{
+    background: transparent;
+}
+
+
+@media (max-width: 991.98px) {
+    .second_version_of_header {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .second_version_of_header button {
+        height: 40px;
+        width: 70px;
+        font-size: 13px;
+    }
+    .second_version_of_header .logo img {
+        padding-left: 0;
+    }
+    .second_version_of_header .logo.flex-1 {
+        flex: inherit;
+    }
+    .second_version_of_header .search_field {
+        margin-left: 8px;
+    }
+    .flex_inherit {
+        flex: inherit !important;
+    }
+}
