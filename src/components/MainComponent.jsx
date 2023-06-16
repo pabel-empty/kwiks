@@ -15,7 +15,7 @@ export default function MainComponent() {
     }
 
     useEffect( () => {
-        getVideos( 'popular', 0, 20 );
+        getVideos( 'popular', 0, 50 );
     }, [] );
 
     return (
