@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <section className='container mx-auto'>
+      <section className='container mx-auto main_container_v2'>
         <div className="flex">
 
           <SideMenu />

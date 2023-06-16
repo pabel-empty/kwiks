@@ -667,6 +667,10 @@ html,body {
 /* Version 2 Main Header */
 .header_section2 {
     box-shadow: none;
+    padding-top: 15px;
+}
+.main_container_v2 .sidebar_wrapper, .main_container_v2 .video_card_wrapper {
+    height: calc(100vh - 90px);
 }
 .second_version_of_header {
     background: linear-gradient(360deg, #EBF2E3 73.91%, #FFFFFF 127.85%);
