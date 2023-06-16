@@ -7,7 +7,7 @@ export default function MainComponent() {
     const [ videos, setVideos ] = useState( null );
 
     function getVideos( type, skip, limit ) {
-        axios.get( `http://staging.eba-2sjjggtm.us-east-2.elasticbeanstalk.com/video?type=${ type }&skip=${ skip }&limit=${ limit }` )
+        axios.get( `https://staging.kwiks-data.com/video?type=${ type }&skip=${ skip }&limit=${ limit }` )
             .then( ( res ) => {
                 setVideos( res.data.data );
             } )

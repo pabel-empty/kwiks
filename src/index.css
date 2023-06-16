@@ -572,3 +572,91 @@ html,body {
 
 
 
+
+
+
+
+
+.input_box h3 {
+    color: #1a2439;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+.input_box p {
+    color: #506376;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+.input_box input {
+    background: #f0f4f7;
+    width: 100%;
+    padding: 17px 25px;
+    border-radius: 35px;
+    color: #808e9c;
+    border: none;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 25px;
+    height: 60px;
+}
+.input_box input:focus-visible{
+    border: none !important;
+    box-shadow: none !important;
+}
+.input_box input::placeholder{
+    color: #808e9c;
+    font-weight: 400;
+    font-size: 15px;
+}
+.input_box form {
+    margin-top: 33px;
+}
+.input_box button {
+    background: #4fdc00;
+    border-radius: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    border: none;
+    height: 60px;
+}
+.temrs_condition_para {
+    font-size: 14px !important;
+    margin-bottom: 40px;
+}
+.temrs_condition_para a {
+    color: #4fdc00;
+}
+.input_box h4 {
+    color: #506376;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.input_box h4 a {
+    color: #4fdc00;
+    font-weight: 700;
+}
+.header_part button {
+    margin: 0;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    height: 40px;
+    width: 40px;
+    background: #d9d9d9;
+    color: #000;
+    line-height: 42px;
+    transform: rotate(45deg);
+    font-size: 36px;
+    font-weight: 300;
+    cursor: pointer !important;
+}
+.input_box {
+    border-radius: 30px;
+    padding: 65px 0px 20px;
+}
+

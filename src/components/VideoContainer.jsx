@@ -90,7 +90,7 @@ export default function VideoContainer( props ) {
                 <h4>Good Morning! Here is my latest magic video.</h4>
 
                 <div className="video relative">
-                    <video ref={ videoRef } autoPlay onClick={ onVideoPress } loop src={ playbackUrls?.[ 720 ][ 0 ] } className="video"></video>
+                    <video muted ref={ videoRef } autoPlay onClick={ onVideoPress } loop src={ playbackUrls?.[ 720 ][ 0 ] } className="video"></video>
 
                     <div className="like_comment_share_area">
                         <a href="#">
