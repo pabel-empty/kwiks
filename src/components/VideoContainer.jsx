@@ -5,7 +5,9 @@ import commentIcon from '../assets/img/message.svg';
 import shareIcon from '../assets/img/share.svg';
 import musicIcon from '../assets/img/music-one.png';
 
-export default function VideoContainer() {
+export default function VideoContainer( props ) {
+
+    const { playbackUrls, comments, privacy, uploader, likes } = props.video;
 
     const videoRef = useRef( null );
     const [ playing, setPlaying ] = useState( false );
@@ -74,8 +76,8 @@ export default function VideoContainer() {
                         <a href="#"><img src={ userProfile } alt="" /></a>
                     </div>
                     <div className="details">
-                        <a href="#"><h5 className='font-bold'>Makenna Rosser</h5></a>
-                        <a href="#"><p className='font-normal'>@rosser_makenna</p></a>
+                        <a href="#"><h5 className='font-bold'>{ uploader?.name }</h5></a>
+                        <a href="#"><p className='font-normal'>@{ uploader?.username }</p></a>
                     </div>
                 </div>
                 <button className="follow_btn">
@@ -88,20 +90,20 @@ export default function VideoContainer() {
                 <h4>Good Morning! Here is my latest magic video.</h4>
 
                 <div className="video relative">
-                    <video ref={ videoRef } autoPlay onClick={ onVideoPress } loop src="https://assets.codepen.io/2629920/gt3.mp4" className="video"></video>
+                    <video ref={ videoRef } autoPlay onClick={ onVideoPress } loop src={ playbackUrls?.[ 720 ][ 0 ] } className="video"></video>
 
                     <div className="like_comment_share_area">
                         <a href="#">
                             <div className="icons_box">
                                 <img src={ heartIcon } alt="" />
                             </div>
-                            <p>22 M</p>
+                            <p>{ likes.length }</p>
                         </a>
                         <a href="#">
                             <div className="icons_box">
                                 <img src={ commentIcon } alt="" />
                             </div>
-                            <p>15.5 K</p>
+                            <p>{ comments }</p>
                         </a>
                         <a href="#">
                             <div className="icons_box">

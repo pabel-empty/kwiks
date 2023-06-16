@@ -8,14 +8,6 @@ import SmallDeviceSidebar from './layouts/SmallDeviceSidebar';
 
 function App() {
 
-  const [ play, setPlay ] = useState( false );
-
-  useEffect( () => {
-    setTimeout( () => {
-      setPlay( true );
-    }, 2000 );
-  }, [] );
-
   return (
     <>
       <Header />
@@ -28,9 +20,7 @@ function App() {
           <Sidebar />
 
 
-          {
-            play ? <MainComponent /> : <h3>Loading</h3>
-          }
+          <MainComponent />
 
         </div>
       </section>
