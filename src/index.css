@@ -655,27 +655,66 @@ html,body {
 .input_box {
     border-radius: 30px;
     padding: 65px 0px 20px;
+    width: 470px;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    background: #fff;
+    transition: .7s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+    opacity: 0;
+}
+.input_box_up{
+    transform: translate(-50%,-50%) scale(1);
+    -webkit-transform: translate(-50%,-50%) scale(1);
+    -moz-transform: translate(-50%,-50%) scale(1);
+    -ms-transform: translate(-50%,-50%) scale(1);
+    -o-transform: translate(-50%,-50%) scale(1);
+    opacity: 1;
+}
+.input_box_down{
+    transform: translate(-50%,-50%) scale(0);
+    -webkit-transform: translate(-50%,-50%) scale(0);
+    -moz-transform: translate(-50%,-50%) scale(0);
+    -ms-transform: translate(-50%,-50%) scale(0);
+    -o-transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
 }
 
+.overLayer {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    transition: .5s;
+}
 
-
-
-
+.overLayerUp{
+    top: 0;
+}
+.overLayerDown{
+    top: 100%;
+}
 
 
 
 /* Version 2 Main Header */
 .header_section2 {
     box-shadow: none;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .main_container_v2 .sidebar_wrapper, .main_container_v2 .video_card_wrapper {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 85px);
 }
 .second_version_of_header {
     background: linear-gradient(360deg, #EBF2E3 73.91%, #FFFFFF 127.85%);
     border-radius: 40px;
-    width: 922px;
+    /* width: 922px; */
     height: 75px;
     margin: 0 auto;
     align-items: center;

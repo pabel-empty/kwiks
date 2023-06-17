@@ -80,7 +80,7 @@ export default function VideoContainer( props ) {
                         <a href="#"><p className='font-normal'>@{ uploader?.username }</p></a>
                     </div>
                 </div>
-                <button className="follow_btn">
+                <button className="follow_btn" onClick={ () => props.openLoginForm() }>
                     Follow
                 </button>
             </div>

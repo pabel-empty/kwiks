@@ -4,7 +4,7 @@ import menuBar from '../assets/img/menubar.svg';
 import searchIcon from '../assets/img/search.svg';
 import $ from 'jquery';
 
-function Header( props ) {
+function Header( { opened, formClose } ) {
 
     const [ showModal, setShowModal ] = useState( false );
     const [ isLogin, setIsLogin ] = useState( true );
@@ -12,6 +12,7 @@ function Header( props ) {
     useEffect( () => {
         searchIconInteractive();
     }, [ searchIconInteractive ] );
+
 
 
     // When click on search field this method will fire
@@ -78,7 +79,7 @@ function Header( props ) {
 
 
             {/* Second Version */ }
-            <div className="flex second_version_of_header justify-between">
+            <div className="flex second_version_of_header justify-between w-9/12">
                 <div className="logo flex-1">
                     <a href="#"><img className="w-full" src={ logo } alt="Logo" /></a>
                 </div>
@@ -92,107 +93,111 @@ function Header( props ) {
                     <button className="bg-transparent text-gray-800 font-bold py-2 px-4 rounded-l">
                         Creator
                     </button>
-                    <div className="separate mx-3"></div>
-                    <button onClick={ () => setShowModal( true ) } className="bg-gray-300 active text-gray-800 font-bold py-2 px-4 rounded-r">
+                    {/* <div className="separate mx-3"></div> */ }
+                    <button onClick={ () => {
+                        setShowModal( true );
+                    } } className="bg-gray-300 active text-gray-800 font-bold py-2 px-4 rounded-r">
                         Login
+                    </button>
+                    <button className="bg-gray-300 active text-gray-800 font-bold py-2 px-4 rounded-r">
+                        Get App
                     </button>
                 </div>
             </div>
 
 
             {/* Login and Signup Modal */ }
-            { showModal ? (
-                <>
-                    <div
-                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-                    >
-                        <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                            {/*content*/ }
-                            <div className="input_box border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            {/* { showModal ? ( */ }
+            <>
+                <div className={ showModal || opened ? 'overLayer overLayerUp' : 'overLayer overLayerDown' } onClick={ () => {
+                    setShowModal( false );
+                    formClose( false );
+                } }></div>
+                <div className={ showModal || opened ? 'input_box input_box_up' : 'input_box input_box_down' }>
 
-                                <div className="header_part">
-                                    <button onClick={ () => setShowModal( false ) }>+</button>
-                                </div>
-
-                                {/*body*/ }
-                                <div className="relative p-6 flex-auto">
-                                    <div className="lg:px-8">
-                                        <h3 className="mb-4 text-xl font-medium text-center">
-                                            { isLogin ? 'Login' : 'Sign up' } to Kwiks
-                                        </h3>
-                                        <p className="text-center">Inter your valid email address and password<br />{ isLogin ? 'login' : 'register' } to your account</p>
-                                        <form action="#">
-                                            {
-                                                isLogin ? <><div>
-                                                    <input
-                                                        type="email"
-                                                        name="email"
-                                                        id="email"
-                                                        className=""
-                                                        placeholder="email / username / phone"
-                                                    />
-                                                </div>
-                                                    <div>
-                                                        <input
-                                                            type="password"
-                                                            name="password"
-                                                            id="password"
-                                                            placeholder="password"
-                                                            className=""
-                                                        />
-                                                    </div></> : <><div>
-                                                        <input
-                                                            type="text"
-                                                            name="fullName"
-                                                            id="fullName"
-                                                            className=""
-                                                            placeholder="Full Name"
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <input
-                                                            type="email"
-                                                            name="createEmail"
-                                                            id="createEmail"
-                                                            className=""
-                                                            placeholder="Email"
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <input
-                                                            type="password"
-                                                            name="createPassword"
-                                                            id="createPassword"
-                                                            placeholder="Create Password"
-                                                            className=""
-                                                        />
-                                                    </div></>
-                                            }
-
-                                            <button
-                                                type="submit"
-                                                className="w-full text-white"
-                                            >
-                                                { isLogin ? 'Login' : 'Create Account' }
-                                            </button>
-
-                                            <p className="text-center temrs_condition_para">
-                                                By clicking here and continuing,<br /> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
-                                            </p>
-
-                                            {
-                                                isLogin ? <h4 className="text-center">Don't have an account? <a onClick={ () => setIsLogin( false ) } href="javascript:void(0)">Sign up</a></h4> : <h4 className="text-center">Already have an account? <a onClick={ () => setIsLogin( true ) } href="javascript:void(0)">Login</a></h4>
-                                            }
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div className="header_part">
+                        <button onClick={ () => {
+                            setShowModal( false );
+                            formClose( false );
+                        } }>+</button>
                     </div>
-                    <div className="opacity-70 fixed inset-0 z-40 bg-black"></div>
-                </>
-            ) : null }
+
+                    {/*body*/ }
+                    <div className="relative p-6 flex-auto">
+                        <div className="lg:px-8">
+                            <h3 className="mb-4 text-xl font-medium text-center">
+                                { isLogin ? 'Login' : 'Sign up' } to Kwiks
+                            </h3>
+                            <p className="text-center">Inter your valid email address and password<br />{ isLogin ? 'login' : 'register' } to your account</p>
+                            <form action="#">
+                                {
+                                    isLogin ? <><div>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            className=""
+                                            placeholder="email / username / phone"
+                                        />
+                                    </div>
+                                        <div>
+                                            <input
+                                                type="password"
+                                                name="password"
+                                                id="password"
+                                                placeholder="password"
+                                                className=""
+                                            />
+                                        </div></> : <><div>
+                                            <input
+                                                type="text"
+                                                name="fullName"
+                                                id="fullName"
+                                                className=""
+                                                placeholder="Full Name"
+                                            />
+                                        </div>
+                                        <div>
+                                            <input
+                                                type="email"
+                                                name="createEmail"
+                                                id="createEmail"
+                                                className=""
+                                                placeholder="Email"
+                                            />
+                                        </div>
+                                        <div>
+                                            <input
+                                                type="password"
+                                                name="createPassword"
+                                                id="createPassword"
+                                                placeholder="Create Password"
+                                                className=""
+                                            />
+                                        </div></>
+                                }
+
+                                <button
+                                    type="submit"
+                                    className="w-full text-white"
+                                >
+                                    { isLogin ? 'Login' : 'Create Account' }
+                                </button>
+
+                                <p className="text-center temrs_condition_para">
+                                    By clicking here and continuing,<br /> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                                </p>
+
+                                {
+                                    isLogin ? <h4 className="text-center">Don't have an account? <a onClick={ () => setIsLogin( false ) } href="javascript:void(0)">Sign up</a></h4> : <h4 className="text-center">Already have an account? <a onClick={ () => setIsLogin( true ) } href="javascript:void(0)">Login</a></h4>
+                                }
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </>
+            {/* ) : null } */ }
         </header>
     );
 }

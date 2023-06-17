@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import VideoContainer from './VideoContainer';
 import axios from 'axios';
 
-export default function MainComponent() {
+export default function MainComponent( { openHeaderLogin } ) {
 
     const [ videos, setVideos ] = useState( null );
+
+    const openLoginForm = () => {
+        openHeaderLogin();
+    };
 
     function getVideos( type, skip, limit ) {
         axios.get( `https://staging.kwiks-data.com/video?type=${ type }&skip=${ skip }&limit=${ limit }` )
@@ -23,7 +27,7 @@ export default function MainComponent() {
             <div className="video_card_wrapper overflow-auto scrollbar-hide">
                 {
                     videos === null ? <h3>Loading....</h3> : videos.map( ( data, index ) => {
-                        return <VideoContainer video={ data } key={ index } />;
+                        return <VideoContainer openLoginForm={ openLoginForm } video={ data } key={ index } />;
                     } )
                 }
             </div>

@@ -8,19 +8,30 @@ import SmallDeviceSidebar from './layouts/SmallDeviceSidebar';
 
 function App() {
 
+
+  const [ open, setOpen ] = useState( null );
+
+  const formOpen = () => {
+    setOpen( true );
+  };
+
+  const formClose = ( event ) => {
+    setOpen( event );
+  };
+
   return (
     <>
-      <Header />
+      <Header opened={ open } formClose={ ( event ) => formClose( event ) } />
       <section className='container mx-auto main_container_v2'>
         <div className="flex">
 
           <SideMenu />
+
           <SmallDeviceSidebar />
 
           <Sidebar />
 
-
-          <MainComponent />
+          <MainComponent openHeaderLogin={ formOpen } />
 
         </div>
       </section>
