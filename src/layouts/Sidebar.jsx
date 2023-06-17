@@ -7,7 +7,7 @@ import rightArrow from '../assets/img/right_arrow.png';
 import appStore from '../assets/img/app_store.svg';
 import playStore from '../assets/img/play_store.svg';
 
-function Sidebar() {
+function Sidebar( props ) {
 
     return (
         <div className='flex-2 sidebar_wrapper w-80 overflow-auto scrollbar-hide'>
@@ -21,7 +21,7 @@ function Sidebar() {
                             </a>
                         </li>
                         <li>
-                            <a href="#" className='items-center flex pb-5'>
+                            <a href="#" className='items-center flex pb-5' onClick={ () => props.openLoginForm() }>
                                 <img src={ userIcon } alt="" />
                                 <span>Following</span>
                             </a>

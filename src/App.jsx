@@ -29,7 +29,7 @@ function App() {
 
           <SmallDeviceSidebar />
 
-          <Sidebar />
+          <Sidebar openLoginForm={ formOpen } />
 
           <MainComponent openHeaderLogin={ formOpen } />
 

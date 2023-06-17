@@ -23,8 +23,8 @@ export default function MainComponent( { openHeaderLogin } ) {
     }, [] );
 
     return (
-        <div className='flex-grow'>
-            <div className="video_card_wrapper overflow-auto scrollbar-hide">
+        <div className='flex-grow video_card_wrapper_main overflow-auto scrollbar-hide'>
+            <div className="video_card_wrapper">
                 {
                     videos === null ? <h3>Loading....</h3> : videos.map( ( data, index ) => {
                         return <VideoContainer openLoginForm={ openLoginForm } video={ data } key={ index } />;

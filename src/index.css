@@ -105,6 +105,8 @@ html,body {
 }
 .logo {
     width: 110px;
+    align-items: center;
+    display: flex;
 }
 .right_content button, .second_version_of_header button {
     background: #fff;
@@ -708,7 +710,7 @@ html,body {
     box-shadow: none;
     padding-top: 10px;
 }
-.main_container_v2 .sidebar_wrapper, .main_container_v2 .video_card_wrapper {
+.main_container_v2 .sidebar_wrapper, .main_container_v2 .video_card_wrapper_main {
     height: calc(100vh - 85px);
 }
 .second_version_of_header {
@@ -732,10 +734,12 @@ html,body {
     -o-border-radius: 30px;
 }
 .second_version_of_header .logo img {
-    width: 108px;
-    padding-left: 10px;
+    width: 50px;
+    padding-left: 7px;
 }
-
+.second_version_of_header .logo a {
+    display: inline-block;
+}
 .second_version_of_header button{
     background: transparent;
 }
