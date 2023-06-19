@@ -4,66 +4,43 @@ import commentIcon from '../assets/img/message.svg';
 import shareIcon from '../assets/img/share.svg';
 import musicIcon from '../assets/img/music-one.png';
 import p1 from '../assets/img/p1.png';
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 export default function VideoContainer( props ) {
 
     const { playbackUrls, comments, privacy, uploader, likes } = props.video;
 
-    const videoRef = useRef( null );
     const [ playing, setPlaying ] = useState( false );
-
-    const [ observer, setObserver ] = useState( null );
-
-    const handleViewChange = useCallback(
-        ( entries ) => {
-            for ( let entry of entries ) {
-                if ( entry.intersectionRatio > 0.5 ) {
-                    if ( videoRef.current ) {
-
-                        document.querySelectorAll( "video" ).forEach( ( video ) => {
-                            video.pause();
-                        } );
-
-                        videoRef.current.play();
-                    }
-                } else {
-                    if ( videoRef.current ) {
-                        videoRef.current.pause();
-                    }
-                }
-            }
-        },
-        []
-    );
-
-
-    const onVideoPress = () => {
+    const videoRef = useRef( null );
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+    };
+    const isVisibile = useElementOnScreen( options, videoRef );
+    const onVideoClick = () => {
         if ( playing ) {
             videoRef.current.pause();
-            setPlaying( false );
+            setPlaying( !playing );
         } else {
             videoRef.current.play();
-            setPlaying( true );
+            setPlaying( !playing );
         }
     };
-
-
     useEffect( () => {
-        const observer = new IntersectionObserver( handleViewChange, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 1.0,
-        } );
-        setObserver( observer );
-        if ( videoRef.current ) {
-            observer.observe( videoRef.current );
-        }
-        return () => {
-            if ( observer ) {
-                observer.disconnect();
+        if ( isVisibile ) {
+            if ( !playing ) {
+                videoRef.current.play();
+                setPlaying( true );
             }
-        };
-    }, [ handleViewChange ] );
+        }
+        else {
+            if ( playing ) {
+                videoRef.current.pause();
+                setPlaying( false );
+            }
+        }
+    }, [ isVisibile ] );
 
 
     return (
@@ -89,7 +66,7 @@ export default function VideoContainer( props ) {
                 <h4>Good Morning! Here is my latest magic video.</h4>
 
                 <div className="video relative">
-                    <video ref={ videoRef } autoPlay onClick={ onVideoPress } loop src={ playbackUrls?.[ 720 ][ 0 ] } className="video"></video>
+                    <video loop preload="true" ref={ videoRef } onClick={ onVideoClick } src={ playbackUrls?.[ 720 ][ 0 ] } className="video"></video>
 
                     <div className="like_comment_share_area">
                         <a href="#">
