@@ -19,7 +19,7 @@ export default function MainComponent( { openHeaderLogin } ) {
     }
 
     useEffect( () => {
-        getVideos( 'popular', 0, 50 );
+        getVideos( 'popular', 0, 20 );
     }, [] );
 
     return (
