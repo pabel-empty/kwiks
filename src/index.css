@@ -179,8 +179,6 @@ html,body {
 /* =============== Left Sidebar Css =============== */
 .sidebar_wrapper {
     padding-top: 30px;
-    overflow-y: scroll;
-    height: calc(100vh - 75px);
 }
 .sidebar ul li a span {
     font-weight: 500;
@@ -710,8 +708,8 @@ html,body {
     box-shadow: none;
     padding-top: 10px;
 }
-.main_container_v2 .sidebar_wrapper, .main_container_v2 .video_card_wrapper_main {
-    height: calc(100vh - 85px);
+.main_container_v2 .sidebar_inner, .main_container_v2 .video_card_wrapper_main {
+    height: calc(100vh - 115px);
 }
 .second_version_of_header {
     background: linear-gradient(360deg, #EBF2E3 73.91%, #FFFFFF 127.85%);

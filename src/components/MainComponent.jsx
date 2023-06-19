@@ -23,7 +23,7 @@ export default function MainComponent( { openHeaderLogin } ) {
     }, [] );
 
     return (
-        <div className='flex-grow video_card_wrapper_main overflow-auto scrollbar-hide'>
+        <div className='w-9/12 video_card_wrapper_main'>
             <div className="video_card_wrapper">
                 {
                     videos === null ? <h3>Loading....</h3> : videos.map( ( data, index ) => {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import userProfile from '../assets/img/user_profile.svg';
 import heartIcon from '../assets/img/heart.svg';
 import commentIcon from '../assets/img/message.svg';
 import shareIcon from '../assets/img/share.svg';
 import musicIcon from '../assets/img/music-one.png';
+import p1 from '../assets/img/p1.png';
 
 export default function VideoContainer( props ) {
 
@@ -13,8 +13,6 @@ export default function VideoContainer( props ) {
     const [ playing, setPlaying ] = useState( false );
 
     const [ observer, setObserver ] = useState( null );
-
-    const [ debugText, setDebugText ] = useState( "" );
 
     const handleViewChange = useCallback(
         ( entries ) => {
@@ -73,7 +71,7 @@ export default function VideoContainer( props ) {
             <div className="user_profile flex justify-between items-center">
                 <div className="creator_box flex">
                     <div className="img">
-                        <a href="#"><img src={ userProfile } alt="" /></a>
+                        <a href="#"><img src={ p1 } alt="" /></a>
                     </div>
                     <div className="details">
                         <a href="#"><h5 className='font-bold'>{ uploader?.name }</h5></a>

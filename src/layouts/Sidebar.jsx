@@ -2,7 +2,11 @@ import React from 'react';
 import userIcon from '../assets/img/user.svg';
 import videoIcon from '../assets/img/video.svg';
 import trendingIcon from '../assets/img/trending.svg';
-import userProfile from '../assets/img/user_profile.svg';
+import p1 from '../assets/img/p1.png';
+import p2 from '../assets/img/p2.png';
+import p3 from '../assets/img/p3.png';
+import p4 from '../assets/img/p4.png';
+import p5 from '../assets/img/p5.png';
 import rightArrow from '../assets/img/right_arrow.png';
 import appStore from '../assets/img/app_store.svg';
 import playStore from '../assets/img/play_store.svg';
@@ -10,8 +14,8 @@ import playStore from '../assets/img/play_store.svg';
 function Sidebar( props ) {
 
     return (
-        <div className='flex-2 sidebar_wrapper w-80 overflow-auto scrollbar-hide'>
-            <div className="sidebar_inner">
+        <div className='sidebar_wrapper w-2/12'>
+            <div className="sidebar_inner fixed overflow-auto scrollbar-hide">
                 <div className="sidebar">
                     <ul className="list-none">
                         <li>
@@ -40,7 +44,7 @@ function Sidebar( props ) {
                     <a href="#">
                         <div className="creator_box flex mb-5">
                             <div className="img">
-                                <img src={ userProfile } alt="" />
+                                <img src={ p1 } alt="" />
                             </div>
                             <div className="details">
                                 <h5>Makenna Rosser</h5>
@@ -51,7 +55,7 @@ function Sidebar( props ) {
                     <a href="#">
                         <div className="creator_box flex mb-5">
                             <div className="img">
-                                <img src={ userProfile } alt="" />
+                                <img src={ p2 } alt="" />
                             </div>
                             <div className="details">
                                 <h5>Desirae Bator</h5>
@@ -62,7 +66,7 @@ function Sidebar( props ) {
                     <a href="#">
                         <div className="creator_box flex mb-5">
                             <div className="img">
-                                <img src={ userProfile } alt="" />
+                                <img src={ p3 } alt="" />
                             </div>
                             <div className="details">
                                 <h5>James Workman</h5>
@@ -73,7 +77,7 @@ function Sidebar( props ) {
                     <a href="#">
                         <div className="creator_box flex mb-5">
                             <div className="img">
-                                <img src={ userProfile } alt="" />
+                                <img src={ p4 } alt="" />
                             </div>
                             <div className="details">
                                 <h5>Talan Stanton</h5>
@@ -84,7 +88,7 @@ function Sidebar( props ) {
                     <a href="#">
                         <div className="creator_box flex mb-5">
                             <div className="img">
-                                <img src={ userProfile } alt="" />
+                                <img src={ p5 } alt="" />
                             </div>
                             <div className="details">
                                 <h5>Madelyn</h5>
