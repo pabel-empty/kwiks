@@ -49,7 +49,7 @@ export default function VideoContainer( props ) {
             <div className="user_profile flex justify-between items-center">
                 <div className="creator_box flex">
                     <div className="img">
-                        <a href="#"><img src={ p1 } alt="" /></a>
+                        <a href="#"><img src={ uploader.avatar } alt="" /></a>
                     </div>
                     <div className="details">
                         <a href="#"><h5 className='font-bold'>{ uploader?.name }</h5></a>
