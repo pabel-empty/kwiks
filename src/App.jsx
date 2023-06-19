@@ -22,6 +22,7 @@ function App() {
   return (
     <>
       <Header opened={ open } formClose={ ( event ) => formClose( event ) } />
+      <div className="spacer"></div>
       <section className='container mx-auto main_container_v2'>
         <div className="flex">
 

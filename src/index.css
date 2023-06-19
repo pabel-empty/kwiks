@@ -13,7 +13,10 @@ html,body {
 .small_device_sidebar{
     display: none;
 }
-
+.spacer {
+    height: 85px;
+    background: #fff;
+}
 
 
 /* =========== Sidebar Menu Section CSS =========== */
@@ -707,6 +710,7 @@ html,body {
 .header_section2 {
     box-shadow: none;
     padding-top: 10px;
+    width: 100%;
 }
 .main_container_v2 .sidebar_inner, .main_container_v2 .video_card_wrapper_main {
     height: calc(100vh - 115px);

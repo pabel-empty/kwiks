@@ -40,7 +40,7 @@ function Header( { opened, formClose } ) {
     }
 
     return (
-        <header className="header_section header_section2 bg-white sticky top-0">
+        <header className="header_section header_section2 bg-white fixed top-0">
 
             {/* First Version */ }
             {/* <div className="header_section_inner flex justify-between items-center pr-10 pl-10">
