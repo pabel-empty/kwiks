@@ -18,6 +18,8 @@ export default function VideoContainer( props ) {
         threshold: 0.3
     };
     const isVisibile = useElementOnScreen( options, videoRef );
+
+
     const onVideoClick = () => {
         if ( playing ) {
             videoRef.current.pause();
@@ -27,6 +29,8 @@ export default function VideoContainer( props ) {
             setPlaying( !playing );
         }
     };
+
+
     useEffect( () => {
         if ( isVisibile ) {
             if ( !playing ) {
@@ -66,7 +70,7 @@ export default function VideoContainer( props ) {
                 <h4>Good Morning! Here is my latest magic video.</h4>
 
                 <div className="video relative">
-                    <video loop preload="true" ref={ videoRef } onClick={ onVideoClick } src={ playbackUrls?.[ 720 ][ 0 ] } className="video"></video>
+                    <video muted={ true } loop preload="true" ref={ videoRef } onClick={ onVideoClick } src={ playbackUrls?.[ 720 ][ 0 ] } className="video"></video>
 
                     <div className="like_comment_share_area">
                         <a href="#">

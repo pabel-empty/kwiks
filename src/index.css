@@ -623,6 +623,9 @@ html,body {
     border: none;
     height: 60px;
 }
+.fill_gree {
+    fill: #4fdc00;
+}
 .temrs_condition_para {
     font-size: 14px !important;
     margin-bottom: 40px;
